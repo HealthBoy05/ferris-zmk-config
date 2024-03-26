@@ -43,9 +43,9 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P                          &kp B                                          &kp J                                 &kp L                       &kp U      &kp Y    &kp SEMI
-&kp A  &kp R  &kp S  &kp T                          &kp G                                          &kp M                                 &kp N                       &kp E      &kp I    &kp O
-&kp X  &kp C  &kp D  &kp V                          &kp Z                                          &kp K                                 &kp H                       &kp COMMA  &kp DOT  &kp FSLH
+&kp Q  &kp W  &kp F  &kp P                          &kp B                                          &kp J                                 &kp L                                &kp U      &kp Y    &kp SEMI
+&kp A  &kp R  &kp S  &kp T                          &kp G                                          &kp M                                 &key_key_timed_behaviour LEFT_WIN N  &kp E      &kp I    &kp O
+&kp X  &kp C  &kp D  &kp V                          &kp Z                                          &kp K                                 &kp H                                &kp COMMA  &kp DOT  &kp FSLH
                      &key_layer_behaviour 1 DELETE  &key_key_timed_behaviour LEFT_CONTROL SPACE    &key_key_behaviour LEFT_SHIFT RETURN  &key_layer_behaviour 2 TAB
             >;
         };
