@@ -43,19 +43,19 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P                             &kp B                                          &kp J                                 &kp L                                &kp U      &kp Y    &kp SEMI
-&kp A  &kp R  &kp S  &kp T                             &kp G                                          &kp M                                 &key_key_timed_behaviour LEFT_WIN N  &kp E      &kp I    &kp O
-&kp X  &kp C  &kp D  &kp V                             &kp Z                                          &kp K                                 &kp H                                &kp COMMA  &kp DOT  &kp FSLH
-                     &key_layer_behaviour 1 BACKSPACE  &key_key_timed_behaviour LEFT_CONTROL SPACE    &key_key_behaviour LEFT_SHIFT RETURN  &key_layer_behaviour 2 TAB
+&kp Q  &kp W  &kp F  &kp P  &kp B                                          &kp J                                 &kp L                                &kp U                                &kp Y    &kp SEMI
+&kp A  &kp R  &kp S  &kp T  &kp G                                          &kp M                                 &key_key_timed_behaviour LEFT_WIN N  &key_key_timed_behaviour LEFT_ALT E  &kp I    &kp O
+&kp X  &kp C  &kp D  &kp V  &kp Z                                          &kp K                                 &kp H                                &kp COMMA                            &kp DOT  &kp FSLH
+                     &mo 1  &key_key_timed_behaviour LEFT_CONTROL SPACE    &key_key_behaviour LEFT_SHIFT RETURN  &mo 2
             >;
         };
 
         number_layer {
             bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &trans    &trans    &trans          &trans        &trans     &trans
-&trans  &kp N4  &kp N5  &kp N6  &trans    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &kp N1  &kp N2  &kp N3  &trans    &trans    &trans          &trans        &trans     &trans
-                        &trans  &trans    &trans    &trans
+&trans  &kp N7  &kp N8  &kp N9  &trans    &trans         &trans          &trans        &trans     &trans
+&trans  &kp N4  &kp N5  &kp N6  &trans    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &kp N1  &kp N2  &kp N3  &trans    &trans         &kp TAB         &trans        &trans     &trans
+                        &trans  &trans    &kp BACKSPACE  &mo 3
             >;
         };
 
@@ -64,7 +64,16 @@
 &trans             &kp AMPERSAND  &kp ASTERISK  &kp SQT    &kp TILDE    &trans  &kp LBKT              &kp RBKT               &kp BACKSLASH  &trans
 &kp DOUBLE_QUOTES  &kp DOLLAR     &kp PERCENT   &kp CARET  &kp PIPE     &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS      &kp PLUS
 &trans             &kp EXCL       &kp AT_SIGN   &kp HASH   &kp GRAVE    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER      &kp EQUAL
-                                                &trans     &trans       &trans  &trans
+                                                &mo 3      &trans       &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
