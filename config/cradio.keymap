@@ -38,6 +38,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <24 25>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,7 +68,7 @@
             bindings = <
 &trans  &kp N7  &kp N8  &kp N9  &trans    &trans         &trans          &trans        &trans     &trans
 &trans  &kp N4  &kp N5  &kp N6  &trans    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &kp N1  &kp N2  &kp N3  &trans    &kp DELETE     &kp TAB         &trans        &trans     &trans
+&trans  &kp N1  &kp N2  &kp N3  &trans    &kp DELETE     &trans          &trans        &trans     &trans
                         &trans  &trans    &kp BACKSPACE  &mo 3
             >;
         };
@@ -70,10 +84,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&kp F12  &kp F7  &kp F8  &kp F9  &trans    &trans  &trans  &trans  &trans  &trans
+&kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans  &trans  &trans  &trans  &trans
+&kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans    &trans  &trans
             >;
         };
     };
