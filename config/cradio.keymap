@@ -5,15 +5,66 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        key_layer_behaviour: key_layer_behaviour {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KEY_LAYER_BEHAVIOUR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            retro-tap;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <0>;
+        };
+
+        key_key_behaviour: key_key_behaviour {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KEY_KEY_BEHAVIOUR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            retro-tap;
+            tapping-term-ms = <0>;
+        };
+
+        key_key_timed_behaviour: key_key_timed_behaviour {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KEY_KEY_TIMED_BEHAVIOUR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P    &kp B        &kp J      &kp L     &kp U      &kp Y    &kp SEMI
-&kp A  &kp R  &kp S  &kp T    &kp G        &kp M      &kp N     &kp E      &kp I    &kp O
-&kp X  &kp C  &kp D  &kp V    &kp Z        &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
-                     &kp TAB  &kp ENTER    &kp SPACE  &kp BSPC
+&kp Q  &kp W  &kp F  &kp P                          &kp B                                          &kp J                                 &kp L                       &kp U      &kp Y    &kp SEMI
+&kp A  &kp R  &kp S  &kp T                          &kp G                                          &kp M                                 &kp N                       &kp E      &kp I    &kp O
+&kp X  &kp C  &kp D  &kp V                          &kp Z                                          &kp K                                 &kp H                       &kp COMMA  &kp DOT  &kp FSLH
+                     &key_layer_behaviour 1 DELETE  &key_key_timed_behaviour LEFT_CONTROL SPACE    &key_key_behaviour LEFT_SHIFT RETURN  &key_layer_behaviour 2 TAB
+            >;
+        };
+
+        number_layer {
+            bindings = <
+&trans  &kp N9  &kp N8  &kp N7  &trans    &trans    &trans          &trans        &trans     &trans
+&trans  &kp N6  &kp N5  &kp N4  &trans    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &kp N3  &kp N2  &kp N1  &trans    &trans    &trans          &trans        &trans     &trans
+                        &trans  &trans    &trans    &trans
+            >;
+        };
+
+        symbol_layer {
+            bindings = <
+&trans             &kp AMPERSAND  &kp ASTERISK  &kp SQT    &kp TILDE    &trans         &kp LBKT              &kp RBKT               &trans  &trans
+&kp DOUBLE_QUOTES  &kp DOLLAR     &kp PERCENT   &kp CARET  &kp PIPE     &kp BACKSLASH  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans
+&trans             &kp EXCL       &kp AT_SIGN   &kp HASH   &kp GRAVE    &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
+                                                &trans     &trans       &trans         &trans
             >;
         };
     };
