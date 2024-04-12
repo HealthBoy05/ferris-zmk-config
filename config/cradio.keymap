@@ -75,7 +75,7 @@
 
         symbol_layer {
             bindings = <
-&trans             &kp AMPERSAND  &kp ASTERISK  &kp SQT    &kp TILDE    &trans         &kp LBKT              &kp RBKT               &kp MINUS   &kp PLUS
+&trans             &kp AMPERSAND  &kp ASTERISK  &kp SQT    &kp TILDE    &kp TAB        &kp LBKT              &kp RBKT               &kp MINUS   &kp PLUS
 &kp DOUBLE_QUOTES  &kp DOLLAR     &kp PERCENT   &kp CARET  &kp PIPE     &kp BACKSLASH  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DELETE  &kp BACKSPACE
 &trans             &kp EXCL       &kp AT_SIGN   &kp HASH   &kp GRAVE    &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER   &kp EQUAL
                                                 &mo 3      &trans       &trans         &trans
